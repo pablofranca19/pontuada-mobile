@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sea_blue"
+    android:orientation="vertical"
+    android:rotation="0"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_config_txt"
+        android:textColorLink="#CC7B32" />
+
+    <Button
+        android:id="@+id/button_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_about_txt"
+        android:textColorLink="#CC7B32" />
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_exit_txt"
+        android:textColorLink="#CC7B32" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/radio_group"
+        android:text="@string/radio_group_text" >
+
+        <RadioButton
+            android:id="@+id/radio_feminino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_feminino" />
+
+        <RadioButton
+            android:id="@+id/radio_masculino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_masculino" />
+    </RadioGroup>
+
+
+
+</LinearLayout>
