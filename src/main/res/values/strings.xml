@@ -1,10 +1,18 @@
 <resources>
     <string name="appName">My first application</string>
-    <string name="button_config_txt">Configuração</string>
+    <string name="button_config_txt">Settings</string>
     <string name="button_about_txt">Sobre</string>
     <string name="button_exit_txt">Exit</string>
     <string name="app_name">My application</string>
     <string name="radio_group_text">Gênero</string>
     <string name="radio_masculino">Masculino</string>
     <string name="radio_feminino">Feminino</string>
+    <string name="nome_label">Nome:</string>
+    <string name="dieta_label">Dieta</string>
+    <string name="check_hipolipidica">Hipolipídia</string>
+    <string name="check_hipoglicidica">Hipoglicídica</string>
+    <string name="check_sem_gluten">Sem Glúten</string>
+    <string name="btn_confirmar">Confirmar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="admin_placeholder">Admin</string>
 </resources>
