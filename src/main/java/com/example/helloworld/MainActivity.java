@@ -1,6 +1,7 @@
 package com.example.helloworld;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +16,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private int numberOfRuns;
-    private SharedPreferences sharedPreferences;
-    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,33 +28,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return insets;
         });
 
-        Button buttonConfig = findViewById(R.id.button_config);
-        Button buttonAbout = findViewById(R.id.button_about);
         Button buttonExit = findViewById(R.id.button_exit);
 
-        // opção 1: buttonConfig.setOnClickListener(this); + implementar o método no OnCreate
+        // opção 1: buttonConfig.setOnClickListener(this); + implementar o method no OnCreate
         buttonExit.setOnClickListener(this);
 
-        sharedPreferences=getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-        numberOfRuns=sharedPreferences.getInt("NumeroRodada", 0);
-        numberOfRuns++;
-        String mens="Esta é a "+numberOfRuns+"a. vez que esta aplicação roda";
-        Toast.makeText(this,mens, Toast.LENGTH_LONG).show();
     }
 
-    protected void onPause() {
-        super.onPause();
-        editor=sharedPreferences.edit();
-        if (editor!=null) {
-            editor.putInt("NumeroRodada", numberOfRuns);
-            editor.commit();
-        }
-    }
+
 
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.button_exit) {
             finish();
+        }
+        else {
+            Intent intent = new Intent(MainActivity.this, ConfigActivity.class);
+            startActivity(intent);
         }
     }
 }
